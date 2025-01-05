@@ -234,3 +234,36 @@ video {
 [hidden] {
   display: none;
 }
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+
+  /* Positioning */
+  position: absolute;
+  bottom: 125%; /* Adjust based on desired position */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  /* Tooltip arrow */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
