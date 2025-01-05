@@ -1,0 +1,60 @@
+---
+import Base from "~/layouts/Base.astro";
+
+const item_files = await Astro.glob(`../../public/imgs/items/*`)
+const painting_files = await Astro.glob(`../../public/imgs/paintings/*`)
+
+const items = item_files.map(file => {
+    return file.default.split('/').pop().split('.')[0]
+});
+
+const paintings = painting_files.map(file => {
+    return file.default.split('/').pop().split('.')[0]
+});
+---
+
+<Base>
+  <div class="flex flex-col justify-center w-full sm:w-[90%] md:w-[80%] lg:w-[70%] mx-auto gap-5 py-5 px-2 markdown">
+    <h4 class="text-shadow-md text-water-savanna-plateau" style="font-family: 'Minecraft Evenings';">
+        Welcome to Jack's Epic Birthday Adventure!
+    </h4>
+    
+    <div class="w-17-block md:w-17-block mx-auto md:ml-0"><img src="/imgs/battle.jpg" alt="logo" class=""/></div>
+    
+    
+    <h6 class="indent-0 text-gray">
+      Greetings, adventurers! You’re invited to join us in celebrating Jack’s 5th birthday. Gear up, grab your pickaxes, and prepare for an unforgettable journey into Jack’s custom Minecraft world.
+    </h6>
+    
+    
+    <h3 class="text-center underline text-4xl text-water-savanna-plateau">The Adventure Awaits</h3>
+
+    <table class="table w-fit text-3xl">
+        <thead>
+            <tr>
+                <!-- <th>Name</th>
+                <th>Description</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>When</td>
+                <td>Saturday, January 18th, 2025</td>
+            </tr>
+            <tr>
+                <td>Where</td>
+                <td><a class="text-link" href="https://www.huntersville.ninjanation.com/">Ninja Nation</a> - Huntersville
+                    14120 Statesville Rd
+                    Huntersville, NC 28078</td>
+            </tr>
+            <tr>
+                <td>What</td>
+                <td>Pizza and Ninja Obstacle Courses</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <a href="/docs" class="self-center py-2 px-5 my-5 button text-shadow-lg text-2xl">RSVP NOW!</a>
+  </div>
+</Base>

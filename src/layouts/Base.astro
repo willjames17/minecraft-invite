@@ -4,9 +4,9 @@ import Navbar from "~/components/Navbar.astro";
 import Footer from "~/components/Footer.astro";
 
 const {
-	block="stone",
+	block="stone-brick",
 	size=48,
-	navHeight=2,
+	navHeight=3,
 	noNav,
 	noFooter=false
 } = Astro.props
@@ -29,14 +29,14 @@ const min_footer_height = 3
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Minecraft Theme</title>
+		<title>JACK'S BDAY</title>
 		<link rel="icon" href="/favicon.ico" />
 		<link rel="stylesheet" href="/css/minecraft.css">
 	</head>
 	<body class="scrollbar">
 		<slot name="first"/>
         {!noNav &&
-			<Navbar height={navHeight}>
+			<Navbar height={navHeight} class="sticky top-0 z-50">
 				<slot name="navbar"/>
 			</Navbar>
 		}

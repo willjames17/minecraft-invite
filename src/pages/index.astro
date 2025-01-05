@@ -14,28 +14,85 @@ const paintings = painting_files.map(file => {
 ---
 
 <Base>
-<div class="flex flex-col justify-center w-full sm:w-[90%] md:w-[80%] lg:w-[70%] mx-auto gap-5 py-5 px-2 markdown">
-    <h3 class=" underline text-2xl sm:text-4xl text-white">Astro Minecraft Theme</h3>
-    <p class="indent-5 text-white">
-        Show off your server, document your projects, build with blocks, display items and paintings, create game like GUIs, and tons more! This is a complete Minecraft theme with a documentation template built using Astro and Tailwindcss.
-        Check out the <a href="/docs" class="text-link hover:underline">docs</a> page for more information on how to use the theme and its features
-    </p>
-    <h3 class="text-center  underline text-4xl text-white">Features</h3>
-    <div class="flex items-center justify-center">
-        <ul>
-            <li>Display over 200+ items</li>
-            <li>Build with 100+ blocks</li>
-            <li>Repeating block backgrounds</li>
-            <li>All 25 paintings</li>
-            <li>Block based units/sizes</li>
-            <li>Create GUIs using panels, slots, and buttons</li>
-            <li>Misc UIs like maps, books, signs, and more</li>
-            <li>Minecraft typography using the Minecraft's font, text colors, and text shadows</li>
-            <li>75+ Minecraft themed colors</li>
-            <li>Markdown theme</li>
-            <li>Documentation system</li>
-        </ul>
+  <div class="flex flex-col justify-center items-center w-full sm:w-[90%] md:w-[80%] lg:w-[70%] mx-auto gap-5 py-5 px-2 markdown">
+    
+    <!-- Header Section -->
+    <h4 class="text-shadow-md text-water-savanna-plateau text-center" style="font-family: 'Minecraft Evenings';">
+        Welcome to Jack's Epic Birthday Adventure!
+    </h4>
+    
+    <!-- Image Section -->
+    <div class="w-[90%] sm:w-[70%] md:w-[60%] lg:w-[50%] mx-auto">
+      <img src="/imgs/battle.jpg" alt="Jack's birthday adventure" class="w-full h-auto rounded-lg"/>
     </div>
-    <a href="/docs" class="self-center py-2 px-5 my-5 button text-shadow-lg text-2xl">Get started</a>
-</div>
+    
+    <!-- Intro Section -->
+    <h6 class="indent-0 text-gray text-center">
+      Greetings, adventurers! You’re invited to join us in celebrating Jack’s 5th birthday. Gear up, grab your pickaxes, and prepare for an unforgettable journey into Jack’s custom Minecraft world.
+    </h6>
+    
+    <!-- Adventure Section -->
+    <h3 class="text-center underline text-4xl text-water-savanna-plateau">The Adventure Awaits</h3>
+
+    <!-- Event Details Table -->
+    <div class="overflow-x-auto w-full">
+      <table class="table w-full md:w-[90%] lg:w-[70%] mx-auto text-2xl sm:text-3xl">
+          <thead>
+              <tr>
+                  <!-- Placeholder for potential headers -->
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td class="font-bold text-right pr-5">When</td>
+                  <td>
+                    Saturday, January 18th, 2025<br/>
+                    12:00-2:00PM
+                  </td>
+              </tr>
+              <tr>
+                  <td class="font-bold text-right pr-5">Where</td>
+                  <td>
+                      <a class="text-link" href="https://www.huntersville.ninjanation.com/" target="_blank">
+                        Ninja Nation
+                      </a><br/>
+                      14120 Statesville Rd<br/>
+                      Huntersville, NC 28078
+                  </td>
+              </tr>
+              <tr>
+                  <td class="font-bold text-right pr-5">What</td>
+                  <td>Pizza and Ninja Obstacle Courses</td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+
+    <!-- Prepare Section -->
+    <h3 class="text-center underline text-4xl text-water-savanna-plateau mt-8">Prepare for Your Journey</h3>
+    <ul class="list-none text-white text-xl md:text-2xl mt-5 space-y-3">
+        <li class="flex items-center gap-4">
+            <div class="h-[48px] w-[48px] bg-item-book-enchanted bg-contain bg-no-repeat"></div>
+            <span>Don’t forget to fill out the <a class="text-link whitespace-nowrap" href="https://www.waiverking.com/print/36801" target="_blank">electronic waiver</a> before the event.</span>
+        </li>
+        <li class="flex items-center gap-4">
+            <div class="h-[48px] w-[48px] bg-item-diamond-boots bg-contain bg-no-repeat"></div>
+            Shoes are required for all adventurers to enter the obstacle courses.
+        </li>
+        <li class="flex items-center gap-4">
+            <div class="h-[48px] w-[48px] bg-item-pumpkin-pie bg-contain bg-no-repeat"></div>
+            Come hungry! Pizza and snacks will be provided to keep your energy up.
+        </li>
+        <li class="flex items-center gap-4">
+            <div class="h-[48px] w-[48px] bg-item-map-filled bg-contain bg-no-repeat"></div>
+            Please RSVP before January 11th!
+        </li>
+    </ul>
+    
+
+    <!-- Call to Action Button -->
+    <a href="/docs" class="py-3 px-6 my-5 button text-shadow-lg text-2xl">
+        RSVP NOW!
+    </a>
+  </div>
 </Base>
